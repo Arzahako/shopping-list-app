@@ -1,0 +1,88 @@
+body {
+	background-color: #FFFFFF;
+    font-family: "Courier New", Arial, sans-serif;
+    margin: 0;
+}
+
+header {
+	background-color: #8FB31D;
+    font-family: "Trebuchet MS", "Lucida Sans", Arial, sans-serif;
+	padding: 10px;
+	margin: 0;
+    margin-bottom: 40px;
+}
+
+h1 {
+	color: #FFFFFF;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+
+.center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}
+
+
+.button {
+	display: inline-block;
+	background-color: #8FB31D;
+	color: #FFFFFF;
+    font-family: "Courier New", Arial, sans-serif;
+	padding: 10px 20px;
+	text-decoration: none;
+	border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.button:hover {
+	background-color: #DFFF6D;
+    color: #000000;
+}
+
+.image {
+	display: flex;
+	justify-content: flex-end;
+    max-width: 18%;
+}
+
+p {
+	margin-top: 20px;
+}
+
+
+form {
+	margin: 20px;
+}
+
+a {
+	margin-right: 10px;
+}
+
+input {
+    margin-bottom: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 45%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.list-name {
+    font-weight: bold;
+    margin-top: 20px;
+}

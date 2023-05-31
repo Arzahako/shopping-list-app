@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ShoppingList - View Lists</title>
+	<link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body>
+	<header>
+		<h1>ShoppingList</h1>
+	</header>
+	<div class="center">
+		<h2>Your Shopping Lists</h2>
+		{{ range .Lists }}
+			<h3>{{ .ListName }}</h3>
+			<table>
+				<thead>
+					<tr>
+						<th>Product</th>
+						<th>Quantity</th>
+						<th>Store</th>
+					</tr>
+				</thead>
+				<tbody>
+					{{ range .Products }}
+						<tr>
+							<td>{{ .Product }}</td>
+							<td>{{ .Quantity }}</td>
+							<td>{{ .Store }}</td>
+						</tr>
+					{{ end }}
+				</tbody>
+			</table>
+		{{ end }}
+		<p>Go back to <a href="/login-success">Main Page</a></p>
+	</div>
+</body>
+</html>

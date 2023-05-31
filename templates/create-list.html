@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Create list</title>
+	<link rel="stylesheet" type="text/css" href="/static/styles.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("#add-row").click(function() {
+				var newRow = '<tr>' +
+					'<td><input type="text" name="product[]" required></td>' +
+					'<td><input type="number" name="quantity[]" required></td>' +
+					'<td><input type="text" name="store[]" required></td>' +
+					'</tr>';
+				$("table tbody").append(newRow);
+			});
+		});
+	</script>
+</head>
+<body>
+	<header>
+		<h1>ShoppingList</h1>
+	</header>
+	<div class="center">
+		<h2>Create a New List</h2>
+		{{ if .ErrorMessage }}
+			<div class="error-message">{{ .ErrorMessage }}</div>
+		{{ end }}
+		<form method="POST" action="/create-list">
+			<label for="list-name">List Name:</label>
+			<input type="text" id="list-name" name="listName" required><br>
+			<table>
+				<thead>
+					<tr>
+						<th>Product</th>
+						<th>Quantity</th>
+						<th>Store</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><input type="text" name="product[]" required></td>
+						<td><input type="number" name="quantity[]" required></td>
+						<td><input type="text" name="store[]" required></td>
+					</tr>
+				</tbody>
+			</table>
+			<button type="button" id="add-row" class="button">Add Row</button>
+			<button type="submit" class="button">Create</button>
+		</form>
+        <p>Go back to <a href="/login-success">Main Page</a></p>
+	</div>
+</body>
+</html>
